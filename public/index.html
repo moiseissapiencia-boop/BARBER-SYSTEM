@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARBER SYSTEM - Clientes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>BARBER SYSTEM</h1>
+        <p>Gerenciamento de Clientes</p>
+        <a href="/agendamento.html">Ir para Agendamentos</a>
+    </header>
+
+    <main>
+        <section class="formulario">
+            <h2>Cadastrar Novo Cliente</h2>
+
+            <form id="formCliente">
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Nome completo"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    placeholder="Telefone"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="E-mail"
+                >
+
+                <div class="botoes">
+                    <button type="submit" class="salvar">
+                        SALVAR CLIENTE
+                    </button>
+
+                    <button type="reset" class="limpar">
+                        LIMPAR
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="clientes">
+            <h2>CLIENTES CADASTRADOS</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaClientes">
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>

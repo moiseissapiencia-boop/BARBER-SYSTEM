@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BARBER SYSTEM - Agendamentos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="agendamento.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>BARBER SYSTEM</h1>
+        <p>Agendamento de Serviços</p>
+        <a href="/">Voltar para Clientes</a>
+    </header>
+
+    <main>
+        <section class="formulario">
+            <h2>Novo Agendamento</h2>
+
+            <form id="formAgendamento">
+                <select id="cliente" required>
+                    <option value="">Selecione o cliente</option>
+                </select>
+
+                <input id="profissional"
+                       placeholder="Nome do profissional" required>
+
+                <select id="servico" required>
+                    <option value="">Selecione o serviço</option>
+                    <option>Corte de cabelo</option>
+                    <option>Barba</option>
+                    <option>Corte e barba</option>
+                </select>
+
+                <input id="data" type="date" required>
+                <input id="horario" type="time" required>
+
+                <button class="salvar" type="submit">
+                    AGENDAR
+                </button>
+            </form>
+        </section>
+
+        <section class="clientes">
+            <h2>AGENDA DE ATENDIMENTOS</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Profissional</th>
+                        <th>Serviço</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                    </tr>
+                </thead>
+                <tbody id="listaAgendamentos"></tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
